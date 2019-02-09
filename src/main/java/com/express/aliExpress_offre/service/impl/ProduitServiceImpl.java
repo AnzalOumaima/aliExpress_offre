@@ -7,25 +7,25 @@ package com.express.aliExpress_offre.service.impl;
 
 import com.express.aliExpress_offre.bean.Categorie;
 import com.express.aliExpress_offre.bean.Produit;
-import com.express.aliExpress_offre.dao.OffreProduitDao;
-import com.express.aliExpress_offre.service.OffreProduitService;
+import com.express.aliExpress_offre.service.ProduitService;
 import java.util.List;
 import org.springframework.stereotype.Service;
+import com.express.aliExpress_offre.dao.ProduitDao;
 
 /**
  *
  * @author Admin
  */
 @Service
-public class OffreProduitServiceImpl implements OffreProduitService {
+public class ProduitServiceImpl implements ProduitService {
 
-    private OffreProduitDao produitDao;
+    private ProduitDao produitDao;
 
-    public OffreProduitDao getProduitDao() {
+    public ProduitDao getProduitDao() {
         return produitDao;
     }
 
-    public void setProduitDao(OffreProduitDao produitDao) {
+    public void setProduitDao(ProduitDao produitDao) {
         this.produitDao = produitDao;
     }
 

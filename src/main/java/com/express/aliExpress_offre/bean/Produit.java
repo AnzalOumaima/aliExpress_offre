@@ -6,11 +6,13 @@
 package com.express.aliExpress_offre.bean;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -28,6 +30,10 @@ public class Produit implements Serializable {
     @ManyToOne
     private Categorie categorie;
 
+    @OneToMany(mappedBy = "produit")
+    private List<OffreProduit> offreProduits;
+    
+    
     public Long getId() {
         return id;
     }
@@ -59,6 +65,15 @@ public class Produit implements Serializable {
     public void setCategorie(Categorie categorie) {
         this.categorie = categorie;
     }
+
+    public List<OffreProduit> getOffreProduits() {
+        return offreProduits;
+    }
+
+    public void setOffreProduits(List<OffreProduit> offreProduits) {
+        this.offreProduits = offreProduits;
+    }
+    
 
     @Override
     public int hashCode() {

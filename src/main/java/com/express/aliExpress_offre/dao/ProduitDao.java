@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
  * @author Admin
  */
 @Repository
-public interface OffreProduitDao extends JpaRepositoryImplementation<Produit, Long> {
+public interface ProduitDao extends JpaRepositoryImplementation<Produit, Long> {
 
     public Produit findByReference(String reference);
 

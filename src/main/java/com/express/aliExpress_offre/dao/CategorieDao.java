@@ -6,6 +6,7 @@
 package com.express.aliExpress_offre.dao;
 
 import com.express.aliExpress_offre.bean.Categorie;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +15,8 @@ import org.springframework.stereotype.Repository;
  * @author Admin
  */
 @Repository
-public interface CategorieDao extends JpaRepository<Categorie, Long>{
-    
+public interface CategorieDao extends JpaRepository<Categorie, Long> {
+
+    public List<Categorie> findByDomaineReference(String referenceDomaine);
+
 }

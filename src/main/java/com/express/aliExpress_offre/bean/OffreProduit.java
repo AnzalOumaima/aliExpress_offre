@@ -28,7 +28,12 @@ public class OffreProduit implements Serializable {
     private String reference;
     private String libelle;
     @ManyToOne
-    private Categorie categorie;
+    private Produit produit;
+    private double qte;
+    private double prix;
+    private double remise;
+    @OneToMany(mappedBy = "offreProduit")
+    private List<PhotoProduit> photoProduits;
 
     public Long getId() {
         return id;
@@ -54,15 +59,45 @@ public class OffreProduit implements Serializable {
         this.libelle = libelle;
     }
 
-    public Categorie getCategorie() {
-        return categorie;
+    public Produit getProduit() {
+        return produit;
     }
 
-    public void setCategorie(Categorie categorie) {
-        this.categorie = categorie;
+    public void setProduit(Produit produit) {
+        this.produit = produit;
     }
 
-   
+    public double getQte() {
+        return qte;
+    }
+
+    public void setQte(double qte) {
+        this.qte = qte;
+    }
+
+    public double getPrix() {
+        return prix;
+    }
+
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
+
+    public double getRemise() {
+        return remise;
+    }
+
+    public void setRemise(double remise) {
+        this.remise = remise;
+    }
+
+    public List<PhotoProduit> getPhotoProduits() {
+        return photoProduits;
+    }
+
+    public void setPhotoProduits(List<PhotoProduit> photoProduits) {
+        this.photoProduits = photoProduits;
+    }
 
     @Override
     public int hashCode() {
