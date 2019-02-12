@@ -20,6 +20,7 @@ public class OffreProduitVo implements Serializable {
     private String qte;
     private String prix;
     private String remise;
+    private String referenceFournisseur;
 
     public String getReference() {
         return reference;
@@ -67,6 +68,14 @@ public class OffreProduitVo implements Serializable {
 
     public void setRemise(String remise) {
         this.remise = remise;
+    }
+
+    public String getReferenceFournisseur() {
+        return referenceFournisseur;
+    }
+
+    public void setReferenceFournisseur(String referenceFournisseur) {
+        this.referenceFournisseur = referenceFournisseur;
     }
 
 }

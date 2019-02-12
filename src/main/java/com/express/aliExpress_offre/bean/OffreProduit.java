@@ -32,6 +32,7 @@ public class OffreProduit implements Serializable {
     private double qte;
     private double prix;
     private double remise;
+    private String referenceFournisseur;
     @OneToMany(mappedBy = "offreProduit")
     private List<PhotoProduit> photoProduits;
 
@@ -89,6 +90,14 @@ public class OffreProduit implements Serializable {
 
     public void setRemise(double remise) {
         this.remise = remise;
+    }
+
+    public String getReferenceFournisseur() {
+        return referenceFournisseur;
+    }
+
+    public void setReferenceFournisseur(String referenceFournisseur) {
+        this.referenceFournisseur = referenceFournisseur;
     }
 
     public List<PhotoProduit> getPhotoProduits() {
