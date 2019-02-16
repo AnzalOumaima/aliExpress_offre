@@ -20,6 +20,6 @@ public interface ProduitDao extends JpaRepositoryImplementation<Produit, Long> {
 
     public Produit findByReference(String reference);
 
-    public List<Produit> findByCategorie(Categorie categorie);
+    public List<Produit> findByCategorie(String reference);
 
 }

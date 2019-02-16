@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.express.aliExpress_offre.client.vo;
+package com.express.aliExpress_offre.rest.vo;
 
 import java.io.Serializable;
 

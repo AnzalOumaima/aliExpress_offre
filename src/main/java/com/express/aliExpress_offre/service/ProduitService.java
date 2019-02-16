@@ -17,8 +17,12 @@ public interface ProduitService {
 
     public Produit findByReference(String reference);
 
-    public List<Produit> findByCategorie(Categorie categorie);
+    public Produit find(Long id);
 
-    public int crer(Produit produit);
+    public List<Produit> findByCategorie(String reference);
+
+    public List<Produit> findAll();
+
+    public int save(Produit produit);
 
 }

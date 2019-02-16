@@ -21,26 +21,28 @@ public class ProduitServiceImpl implements ProduitService {
 
     private ProduitDao produitDao;
 
-    public ProduitDao getProduitDao() {
-        return produitDao;
-    }
-
-    public void setProduitDao(ProduitDao produitDao) {
-        this.produitDao = produitDao;
-    }
-
     @Override
     public Produit findByReference(String reference) {
         return produitDao.findByReference(reference);
     }
 
     @Override
-    public List<Produit> findByCategorie(Categorie categorie) {
-        return produitDao.findByCategorie(categorie);
+    public Produit find(Long id) {
+        return produitDao.getOne(id);
     }
 
     @Override
-    public int crer(Produit produit) {
+    public List<Produit> findByCategorie(String reference) {
+        return produitDao.findByCategorie(reference);
+    }
+
+    @Override
+    public List<Produit> findAll() {
+        return produitDao.findAll();
+    }
+
+    @Override
+    public int save(Produit produit) {
         Produit pro = findByReference(produit.getReference());
         if (pro != null) {
             return -1;
@@ -48,6 +50,14 @@ public class ProduitServiceImpl implements ProduitService {
             produitDao.save(produit);
             return 1;
         }
+    }
+
+    public ProduitDao getProduitDao() {
+        return produitDao;
+    }
+
+    public void setProduitDao(ProduitDao produitDao) {
+        this.produitDao = produitDao;
     }
 
 }

@@ -6,6 +6,7 @@
 package com.express.aliExpress_offre.dao;
 
 import com.express.aliExpress_offre.bean.OffreProduit;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -13,5 +14,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Admin
  */
 public interface OffreProduitDao extends JpaRepository<OffreProduit, Long> {
-    
+
+    public OffreProduit findByReference(String reference);
+
+    public List<OffreProduit> findByProduit(String reference);
+
 }

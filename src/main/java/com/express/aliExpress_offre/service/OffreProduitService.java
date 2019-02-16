@@ -6,6 +6,7 @@
 package com.express.aliExpress_offre.service;
 
 import com.express.aliExpress_offre.bean.Categorie;
+import com.express.aliExpress_offre.bean.OffreProduit;
 import com.express.aliExpress_offre.bean.Produit;
 import java.util.List;
 
@@ -15,10 +16,14 @@ import java.util.List;
  */
 public interface OffreProduitService {
 
-    public Produit findByReference(String reference);
+    public OffreProduit findByReference(String reference);
 
-    public List<Produit> findByCategorie(Categorie categorie);
+    public OffreProduit find(Long id);
 
-    public int crer(Produit offreProduit);
+    public List<OffreProduit> findByProduit(String reference);
+
+    public List<OffreProduit> findAll();
+
+    public OffreProduit save(OffreProduit offreProduit);
 
 }

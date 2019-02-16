@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.express.aliExpress_offre.client.vo;
+package com.express.aliExpress_offre.rest.vo;
 
 import java.io.Serializable;
 
@@ -11,11 +11,12 @@ import java.io.Serializable;
  *
  * @author Admin
  */
-public class DomaineVo implements Serializable {
+public class ProduitVo implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private String reference;
     private String libelle;
+    private CategorieVo categorieVo;
 
     public String getReference() {
         return reference;
@@ -32,4 +33,13 @@ public class DomaineVo implements Serializable {
     public void setLibelle(String libelle) {
         this.libelle = libelle;
     }
+
+    public CategorieVo getCategorieVo() {
+        return categorieVo;
+    }
+
+    public void setCategorieVo(CategorieVo categorieVo) {
+        this.categorieVo = categorieVo;
+    }
+
 }
